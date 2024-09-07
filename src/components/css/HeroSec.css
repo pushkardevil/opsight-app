@@ -1,0 +1,46 @@
+.hero-section {
+    position: relative;
+  }
+  
+  .hero-swiper .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+  }
+  
+  .hero-swiper .swiper-pagination-bullet-active {
+    background: #007bff;
+    opacity: 1;
+  }
+  
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    color: white;
+  }
+  
+  .hero-swiper .swiper-scrollbar {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .hero-swiper .swiper-scrollbar-drag {
+    background: #007bff;
+  }
+  
+  .hero-swiper .overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .hero-swiper .overlay h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .hero-swiper .overlay p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+  }
+  

@@ -1,0 +1,26 @@
+def main():
+    m1 = int(input())  # Average time for center 1
+    m2 = int(input())  # Average time for center 2
+    N = int(input())  # Number of villages
+    populations = list(map(int, input().split()))  # Population of each village
+
+    # Sort populations in descending order
+    populations.sort(reverse=True)
+    total_vaccination_time = 0
+
+    center1_time = 0
+    center2_time = 0
+
+    # Assign people to centers in a way that minimizes time
+    for population in populations:
+        if center1_time <= center2_time:
+            center1_time += population * m1
+        else:
+            center2_time += population * m2
+
+    total_vaccination_time = max(center1_time, center2_time)
+
+    print(total_vaccination_time)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,204 @@
+.solutionsContainer {
+    height: 60vh;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.solutionEffectSection {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.solutionsContainer::before {
+    content: "";
+    position: absolute;
+
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.solutionsContainer .effectsHeading {
+    /* position: absolute; */
+    top: 1rem;
+    color: #f7f7f7;
+    font-size: 2.2rem;
+    font-weight: 650;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    /* left: 0; */
+    grid-template-columns: repeat(2, 1fr);
+    /* text-shadow: 1px 1px 1px black; */
+    letter-spacing: 1px;
+}
+
+.solutionsContainer .divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 95%;
+    background: rgba(255, 255, 255, 0.708);
+}
+
+.solutionEffectSection .solution-left {
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15vh;
+    position: absolute;
+    width: max-content;
+    top: 250vh;
+    left: 75%;
+    transform: translate(-50%, -52%);
+    animation: beforeSolutions 8s ease-in infinite alternate;
+    animation-delay: 0.3s;
+}
+
+.solutionEffectSection .solution-right {
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15vh;
+    position: absolute;
+    width: max-content;
+    top: 139vh;
+    left: 25%;
+    transform: translate(-50%, -52%);
+    animation: beforeSolutions 8s ease-in infinite alternate;
+}
+
+:root {
+    --scrollValue: 38vh;
+    --scrollStart: 139vh;
+}
+
+@keyframes beforeSolutions {
+    0% {
+        top: calc(var(--scrollStart) - (1 * var(--scrollValue)));
+    }
+
+    4% {
+        top: calc(var(--scrollStart) - (1 * var(--scrollValue)));
+    }
+
+    24% {
+        top: calc(var(--scrollStart) - (2 * var(--scrollValue)));
+    }
+
+    28% {
+        top: calc(var(--scrollStart) - (2 * var(--scrollValue)));
+    }
+
+    48% {
+        top: calc(var(--scrollStart) - (3 * var(--scrollValue)));
+    }
+
+    52% {
+        top: calc(var(--scrollStart) - (3 * var(--scrollValue)));
+    }
+
+    72% {
+        top: calc(var(--scrollStart) - (4 * var(--scrollValue)));
+    }
+
+    76% {
+        top: calc(var(--scrollStart) - (4 * var(--scrollValue)));
+    }
+
+    96% {
+        top: calc(var(--scrollStart) - (5 * var(--scrollValue)));
+    }
+
+    100% {
+        top: calc(var(--scrollStart) - (5 * var(--scrollValue)));
+    }
+}
+
+.solutionEffectSection .mid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solutionEffectSection .mid img {
+    /* width: 150px; */
+    border-radius: 50%;
+    filter: brightness(0.7);
+}
+
+.solutionEffectSection .mid .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.solution-left .effects {
+    padding: 0.5rem 0.5rem;
+    width: 19rem;
+    height: 23vh;
+    background: #0000007a;
+    color: #13c52f;
+    border-radius: 5px;
+    /* font-size: 1.5rem; */
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+}
+
+.solution-right .beforeEffects {
+    padding: 0.5rem 0.5rem;
+    height : 23vh;
+    width: 19rem;
+    background: #0000007a;
+    color: white;
+    border-radius: 5px;
+    /* font-size: 1.5rem; */
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+}
+
+
+@media screen and (max-width: 768px) {
+    .solution-left .effects, .solution-right .beforeEffects {
+        width: 8rem;
+        height: 9vh;
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .solutionsContainer .effectsHeading {
+        font-size:.9rem;
+}
+}
